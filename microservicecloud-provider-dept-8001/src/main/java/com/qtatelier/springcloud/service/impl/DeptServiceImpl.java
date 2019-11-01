@@ -18,20 +18,20 @@ import java.util.List;
 public class DeptServiceImpl implements DeptService {
 
     @Resource
-    DeptDao deptDao;
+    private DeptDao deptDao;
 
     @Override
     public boolean add(Dept dept) {
-        return false;
+        return deptDao.addDept(dept);
     }
 
     @Override
     public Dept get(Long id) {
-        return null;
+        return deptDao.findById(id);
     }
 
     @Override
     public List<Dept> list() {
-        return null;
+        return deptDao.findAll();
     }
 }
