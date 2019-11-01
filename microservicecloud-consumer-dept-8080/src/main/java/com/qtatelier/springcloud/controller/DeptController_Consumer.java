@@ -35,6 +35,7 @@ public class DeptController_Consumer {
     @Resource
     private RestTemplate restTemplate;
 
+
     @RequestMapping("/consumer/dept/add")
     public boolean add(Dept dept){
         return restTemplate.postForObject(REST_URL_PREFIX+"/dept/add",dept,Boolean.class);
@@ -48,6 +49,13 @@ public class DeptController_Consumer {
     @RequestMapping("/consumer/dept/list")
     public List<Dept> get(){
         return restTemplate.getForObject(REST_URL_PREFIX+"/dept/list",List.class);
+    }
+
+
+    //测试@EnableDiscoveryClient,消费端可以调用服务发现
+    @RequestMapping(value="/consumer/dept/discovery")
+    public Object discovery(){
+        return restTemplate.getForObject(REST_URL_PREFIX+"/dept/discovery", Object.class);
     }
 
 }

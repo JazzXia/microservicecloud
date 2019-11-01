@@ -96,7 +96,7 @@
                 <artifactId>maven-resources-plugin</artifactId>
                 <configuration>
                     <delimiters>
-                        <delimit>$</delimit>
+                        <delimit>${*}</delimit>
                     </delimiters>
                 </configuration>
             </plugin>

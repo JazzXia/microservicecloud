@@ -34,5 +34,5 @@ spring:
 info:
   app.name: qtatelier-microservicecloud
   company.name: www.qtatelier.com
-  build.artifactId: $project.artifactId$
-  build.version: $project.version$
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}
