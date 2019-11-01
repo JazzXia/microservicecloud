@@ -2,6 +2,9 @@ eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
       defaultZone: http://localhost:7001/eureka/
+  instance:
+    instance-id: microservicecloud-dept8001 #自定义服务名称信息
+    prefer-ip-address: true #注册中心访问路径，修改成ip地址
 
 
 server:
@@ -28,3 +31,8 @@ spring:
       max-total: 5                                          # 最大连接数
       max-wait-millis: 200                                  # 等待连接获取的最大超时时间
 
+info:
+  app.name: qtatelier-microservicecloud
+  company.name: www.qtatelier.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
