@@ -9,7 +9,7 @@ eureka:
 
 
 server:
-  port: 8002
+  port: 8003
 
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
