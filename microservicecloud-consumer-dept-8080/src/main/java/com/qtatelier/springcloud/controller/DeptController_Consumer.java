@@ -28,9 +28,11 @@ import java.util.List;
  */
 @RestController
 public class DeptController_Consumer {
-
-    private static final String REST_URL_PREFIX = "http://localhost:8001";
-
+    //private static final String REST_URL_PREFIX = "http://localhost:8001";
+    //修改客户端的访问类，也就是说从原先通过8001端口访问修改为通过微服务名来访问。
+    //这样写的好处就是不再是写死的端口号，而是动态的服务名
+    //Ribbon和Eureka整合后Consumer可以直接调用服务而不用再关心地址和端口号
+    private static final String REST_URL_PREFIX = "http://MICROSERVICECLOUD-DEPT";
 
     @Resource
     private RestTemplate restTemplate;
