@@ -13,8 +13,12 @@ import java.util.List;
  * @create 2019-11-03-12:15
  * @email jazzxiaw@qq.com
  * @since 2019
+ *
+ *
+ * 这个适用于Feign负载均衡的Service
  */
-@FeignClient(value = "MICROSERVICECLOUD-DEPT")
+//@FeignClient(value = "MICROSERVICECLOUD-DEPT")
+  @FeignClient(value="MICROSERVICECLOUD-DEPT",fallbackFactory = DeptClientServiceFallbackFactory.class)
 public interface DeptClientService {
 
     @RequestMapping(value = "/dept/get/{id}", method = RequestMethod.GET)
