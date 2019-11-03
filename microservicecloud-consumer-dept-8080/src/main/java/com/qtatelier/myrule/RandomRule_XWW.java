@@ -58,6 +58,7 @@ public class RandomRule_XWW extends AbstractLoadBalancerRule {
             }else {
                 total = 0;
                 currentIndex++;
+                //这一项判断也可以放在前面，但是没有这个方便，因为放在前面要多判断一次，影响效率。
                 if(currentIndex >= upList.size())
                 {
                     currentIndex = 0;
